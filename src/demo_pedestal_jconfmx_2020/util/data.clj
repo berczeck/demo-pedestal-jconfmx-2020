@@ -10,8 +10,8 @@
 (defn write-db [new-db] (reset! memory-db new-db))
 
 (defn create!
-	[name power nemesis]
-	(let [character {:name name :power power :nemesis nemesis}]
+	[name power friends]
+	(let [character {:name name :power power :friends friends}]
 		(write-db (update (read-db) :data conj character))
 		character))
 
