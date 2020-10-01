@@ -5,7 +5,6 @@
 						[clojure.string :as str]
 						[demo-pedestal-jconfmx-2020.util.content :refer [to->json]]))
 
-;; TODO: Create hello-world route GET "/hello-world" & handler
 ;; TODO: Create dragon-ball-view route GET "/dragon-ball/:name" & read handler
 ;; TODO: Create dragon-ball-create route POST "/dragon-ball/:name" & create handler (using get)
 ;; TODO: Refactor create handler using let (path-params json-params)
