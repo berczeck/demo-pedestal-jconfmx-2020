@@ -5,9 +5,6 @@
 						[clojure.string :as str]
 						[demo-pedestal-jconfmx-2020.util.content :refer [to->json]]))
 
-;; TODO: Create dragon-ball-create route POST "/dragon-ball/:name" & create handler (using get)
-;; TODO: Refactor create handler using let (path-params json-params)
-;; TODO: Refactor create handler using destructuring {:keys [json-params path-params]}
 ;; TODO: Create demo-interceptor, add it to routes
 
 (def routes
