@@ -12,6 +12,9 @@
 
 ;; request {:path-params {:name} :json-params {:power :friends}}
 (defn dragon-ball-create
-	[request]
-	{:status 200
-	 :body (data/create! (get-in request [:path-params :name]) (get-in request [:json-params :power]) (get-in request [:json-params :friends]))})
+	[{:keys [json-params path-params]}]
+	(let [name    (:name path-params)
+				power   (:power json-params)
+				friends (:friends json-params)]
+		{:status 200
+		 :body   (data/create! name power friends)}))
