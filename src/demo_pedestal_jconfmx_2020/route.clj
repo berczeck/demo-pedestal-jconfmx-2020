@@ -13,4 +13,5 @@
 (def routes
 	(route/expand-routes
 		#{["/hello-world" :get [service/hello-world] :route-name :hello-world]
-			["/dragon-ball/:name" :get [service/dragon-ball-view] :route-name :dragon-ball-view]}))
+			["/dragon-ball/:name" :get [service/dragon-ball-view] :route-name :dragon-ball-view]
+			["/dragon-ball/:name":post [(body-params/body-params) service/dragon-ball-create] :route-name :dragon-ball-create]}))
