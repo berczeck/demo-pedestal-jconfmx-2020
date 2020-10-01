@@ -5,7 +5,6 @@
 						[clojure.string :as str]
 						[demo-pedestal-jconfmx-2020.util.content :refer [to->json]]))
 
-;; TODO: Create dragon-ball-view route GET "/dragon-ball/:name" & read handler
 ;; TODO: Create dragon-ball-create route POST "/dragon-ball/:name" & create handler (using get)
 ;; TODO: Refactor create handler using let (path-params json-params)
 ;; TODO: Refactor create handler using destructuring {:keys [json-params path-params]}
@@ -13,4 +12,5 @@
 
 (def routes
 	(route/expand-routes
-		#{["/hello-world" :get [service/hello-world] :route-name :hello-world]}))
+		#{["/hello-world" :get [service/hello-world] :route-name :hello-world]
+			["/dragon-ball/:name" :get [service/dragon-ball-view] :route-name :dragon-ball-view]}))
