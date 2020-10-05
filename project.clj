@@ -10,5 +10,4 @@
                  [org.clojure/data.json "0.2.6"]
                  [ch.qos.logback/logback-classic "1.1.1"]]
   :main ^:skip-aot demo-pedestal-jconfmx-2020.core
-  :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

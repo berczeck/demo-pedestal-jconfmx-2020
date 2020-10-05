@@ -6,6 +6,7 @@
 (def service
   {::http/type :jetty
    ::http/routes route/routes
+   ::http/host "0.0.0.0"
    ::http/port 9080})
 
 (defn create-server
